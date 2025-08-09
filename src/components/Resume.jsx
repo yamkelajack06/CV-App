@@ -1,31 +1,34 @@
-export default function Resume() {
+export default function Resume({ info }) {
+  const { firstName, lastName, phone, email, address, summary } = info;
   return (
     <div className="resume">
       <header>
         <div className="name">
-          <h1>John Maxwell James</h1>
+          <h1>
+            {firstName} {lastName}
+          </h1>
           <h5>Mechanical Engineer</h5>
         </div>
 
         <div className="contact-info">
-          <div className="div" id = "div">
-            <h5>Adrdess</h5>
-            <p>25 Fox Street, Belverly, 2024 high road, South America</p>
+          <div className="div" id="div">
+            <h5>Address</h5>
+            <p>{address}</p>
           </div>
-          <div className="div" id = "div">
+          <div className="div" id="div">
             <h5>Phone</h5>
-            <p>Phone</p>
+            <p>{phone}</p>
           </div>
-          <div className="div" id =  "div">
+          <div className="div" id="div">
             <h5>Email</h5>
-            <p class = "email">johnsdfgdgsdfgfgssfsdfasfasd123@gmail.com</p>
+            <p class="email">{email}</p>
           </div>
         </div>
       </header>
       <main>
         <div className="summary">
           <h5>Summary</h5>
-          <p>Some stuff I will change later</p>
+          <p>{summary}</p>
         </div>
         <div className="education">
           <h5>Education</h5>
