@@ -73,6 +73,14 @@ form {
   max-width: 100%;
 }
 
+header h1 {
+  font-size: 1.5rem;
+}
+
+.name h5 {
+  font-size: 0.8rem;
+}
+
 .resume {
   min-width: 40%;
   max-width: 80%;
@@ -81,7 +89,7 @@ form {
 }
 
 .App {
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -89,17 +97,21 @@ form {
   grid-template-columns: 40% 60%;
 }
 
-.resume div {
+.resume main div {
   min-height: 5em;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  max-height: 25%;
+  min-height: 15%;
+  flex-wrap: wrap;
   background-color: lightblue;
 }
 
+header * {
+  max-height: 100%;
+}
 .name {
   max-width: 50%;
   min-width: 50%;
@@ -111,9 +123,8 @@ header {
   text-align: left;
 }
 
-/* FIXED: Removed forced max-height here */
-.contact-info * > div {
-  /* max-height removed to allow natural height */
+.contact-info  > div {
+  margin: .5rem;
 }
 
 .contact-item h5 {
@@ -129,6 +140,11 @@ header {
 
 .name h1 {
   margin: 1rem 1rem 0 1rem;
+}
+
+.email {
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .name h5 {
@@ -184,6 +200,14 @@ main h5 {
   .title {
     margin: 0;
   }
+
+  .contact-info p {
+    font-size: .5rem;
+  }
+
+  .contact-info h5 {
+    font-size: .8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -197,15 +221,9 @@ main h5 {
 
   form {
     max-width: 95%;
-    outline: 2px solid lime;
   }
 
   .contact-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    outline: 2px solid blue;
-    min-width: 100%;
     padding: 0;
     height: auto; /* Allow natural height */
   }
@@ -216,9 +234,15 @@ main h5 {
 
   header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    background-color: lightblue;
+  }
+
+  header h1 {
+    font-size: .8rem;
+  }
+
+  .name h5 {
+    font-size: 1rem;
   }
 
   .contact-info h5 {
@@ -240,7 +264,6 @@ main h5 {
     display: block;
     margin: 0 0 0 1.5rem;
     padding: 0;
-    outline: 2px solid red;
   }
 
   form {
@@ -254,12 +277,11 @@ main h5 {
 
   /* FIXED: height auto and min-height set */
   .div#div {
-    max-height: 1px;
-    outline: 2px solid blue;
+    min-width: 10vh;
   }
 
   .contact-info h5 {
-    margin: 0;
+    margin: 0.5rem 0 0 0;
   }
 
   .contact-info p {
@@ -270,11 +292,22 @@ main h5 {
     max-width: 85%;
     margin-left: 1.5rem;
   }
+
+  header {
+    min-height: 23vh;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .name h5 {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1025px) {
   .App {
-    min-width: 100vw;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -282,6 +315,11 @@ main h5 {
     padding: 0;
   }
 
+  body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
   form {
     max-width: 100%;
     margin: 0.6rem 1.5rem;
@@ -297,7 +335,6 @@ main h5 {
     margin: 0;
     padding: 0;
     max-height: none;
-    outline: 2px solid red;
     height: auto;
   }
 
@@ -311,5 +348,15 @@ main h5 {
 
   .contact-info p {
     margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info p {
+    font-size: .7rem;
+  }
+
+  header {
+    min-height: 20vh;
   }
 }

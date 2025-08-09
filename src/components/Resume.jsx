@@ -3,14 +3,14 @@ export default function Resume() {
     <div className="resume">
       <header>
         <div className="name">
-          <h1>Name</h1>
-          <h5>Proffesion</h5>
+          <h1>John Maxwell James</h1>
+          <h5>Mechanical Engineer</h5>
         </div>
 
         <div className="contact-info">
           <div className="div" id = "div">
-            <h5>Address</h5>
-            <p>Address</p>
+            <h5>Adrdess</h5>
+            <p>25 Fox Street, Belverly, 2024 high road, South America</p>
           </div>
           <div className="div" id = "div">
             <h5>Phone</h5>
@@ -18,7 +18,7 @@ export default function Resume() {
           </div>
           <div className="div" id =  "div">
             <h5>Email</h5>
-            <p>Email</p>
+            <p class = "email">johnsdfgdgsdfgfgssfsdfasfasd123@gmail.com</p>
           </div>
         </div>
       </header>
