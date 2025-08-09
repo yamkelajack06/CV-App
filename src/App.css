@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.forms-tab {
+  outline: 1px solid black;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  max-width: 80%;
+  min-width: 70%;
+  border-radius: 1rem;
+  height: 30px;
+  overflow: hidden;
+}
+
+.tab-wrapper {
+  outline: 1px solid black;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form {
+  outline: 1px solid black;
+  max-width: 100%;
+  border-radius: 1rem;
+  margin: 0.6rem 1.5rem;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.input {
+  display: block;
+  margin: 2rem;
+}
+
+.title {
+  margin: 0.2rem;
+}
+
+.label {
+  display: flex;
+  min-width: 95%;
+  flex-direction: column;
+  margin: 0 0.8rem;
+  min-height: 70px;
+  font-size: 0.9rem;
+}
+
+.label input {
+  min-height: 25px;
+  max-width: 100%;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.label textarea {
+  max-width: 100%;
+}
+
+.resume {
+  min-width: 40%;
+  max-width: 80%;
+  margin: 0.5rem;
+  outline: 1px solid black;
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.resume div {
+  min-height: 5em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 25%;
+  background-color: lightblue;
+}
+
+.name {
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.contact-info {
+  max-width: 40%;
+  min-width: 40%;
+  text-align: left;
+}
+
+/* FIXED: Removed forced max-height here */
+.contact-info * > div {
+  /* max-height removed to allow natural height */
+}
+
+.contact-item h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-info p {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.name h1 {
+  margin: 1rem 1rem 0 1rem;
+}
+
+.name h5 {
+  margin: 0 1rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+main p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  margin: 0 0.8rem;
+}
+
+main h5 {
+  padding: 0;
+  margin: 0;
+  width: 95%;
+  border-bottom: 1.5px solid grey;
+  margin: 0.5rem 0.8rem 0.1rem 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    max-width: 95%;
+  }
+
+  .resume {
+    min-width: 95%;
+  }
+
+  .forms-tab {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    min-height: 120px;
+  }
+
+  .input {
+    display: block;
+    margin: 0;
+  }
+
+  .title {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: block;
+    margin: 0 0 0 1.5rem;
+    padding: 0;
+  }
+
+  form {
+    max-width: 95%;
+    outline: 2px solid lime;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    outline: 2px solid blue;
+    min-width: 100%;
+    padding: 0;
+    height: auto; /* Allow natural height */
+  }
+
+  .resume {
+    min-width: 85%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: lightblue;
+  }
+
+  .contact-info h5 {
+    margin: 0 1rem;
+    padding: 0;
+  }
+
+  .contact-info p {
+    font-size: 0.8rem;
+    margin: 0 1rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: block;
+    margin: 0 0 0 1.5rem;
+    padding: 0;
+    outline: 2px solid red;
+  }
+
+  form {
+    max-width: 85%;
+  }
+
+  .contact-info {
+    max-height: 30vh;
+    outline: 2px solid line;
+  }
+
+  /* FIXED: height auto and min-height set */
+  .div#div {
+    max-height: 1px;
+    outline: 2px solid blue;
+  }
+
+  .contact-info h5 {
+    margin: 0;
+  }
+
+  .contact-info p {
+    margin: 0;
+  }
+
+  .resume {
+    max-width: 85%;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    max-width: 100%;
+    margin: 0.6rem 1.5rem;
+  }
+
+  .resume {
+    min-width: 40%;
+    max-width: 80%;
+    margin: 0.5rem;
+  }
+
+  .contact-info {
+    margin: 0;
+    padding: 0;
+    max-height: none;
+    outline: 2px solid red;
+    height: auto;
+  }
+
+  .contact-item p {
+    margin: 0;
+  }
+
+  .contact-info h5 {
+    margin: 0;
+  }
+
+  .contact-info p {
+    margin: 0;
+  }
+}

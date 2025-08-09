@@ -9,3 +9,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  width: 30px;
+  height: 30px;
+}
+
